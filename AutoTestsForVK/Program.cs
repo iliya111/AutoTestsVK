@@ -10,6 +10,7 @@ namespace AutoTestsForVK
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Q");
         }
     }
 }

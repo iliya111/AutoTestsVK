@@ -13,15 +13,20 @@ namespace AutoTestsForVK.Classes
 {
     class UserPage
     {
-        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Сообщения')]")]
+        public UserPage()
+        {
+            PageFactory.InitElements(PropertiesCollection.driver, this);
+        }
+        [FindsBy(How = How.XPath, Using = "//*[text()='Сообщения']")]
         public IWebElement Online { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//input[@id='im_dialogs_search']")]
+        public IWebElement Search { get; set; }
 
         public void AssertOnline()
         {
-         
-           
-            //Thread.Sleep(10000);
-            //Assert.IsTrue(Online.Displayed);
+            Thread.Sleep(5000); 
+            Assert.IsTrue(Online.Displayed);
         }
 
 

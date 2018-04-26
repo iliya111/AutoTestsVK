@@ -66,13 +66,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\PropertiesCollection.cs" />
+    <Compile Include="Classes\GoToMessages.cs" />
     <Compile Include="Classes\LoginPage.cs" />
     <Compile Include="Classes\UserPage.cs" />
+    <Compile Include="Features\FriendSearch.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FriendSearch.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\LoginVK.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginVK.feature</DependentUpon>
     </Compile>
+    <Compile Include="FriendSearchSteps.cs" />
     <Compile Include="Hooks\Hooks.cs" />
     <Compile Include="LoginVKSteps.cs" />
     <Compile Include="Program.cs" />
@@ -80,6 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\FriendSearch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FriendSearch.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\LoginVK.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginVK.feature.cs</LastGenOutput>

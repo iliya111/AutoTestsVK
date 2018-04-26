@@ -12,8 +12,8 @@ namespace AutoTestsForVK
         public void GivenВводимЛогинИПароль(string Login, string Password)
         {
             LoginPage Log = new LoginPage();
-                        Log.URL();
-            Thread.Sleep(2000);
+            Log.URL();
+            //Thread.Sleep(2000);
             Log.Login(Login, Password);
 
         }
@@ -22,6 +22,7 @@ namespace AutoTestsForVK
         [Then(@"Проверка выполненного логина")]
         public void ThenПроверкаВыполненногоЛогина()
         {
+            
             UserPage Onl = new UserPage();
             Onl.AssertOnline();
         }

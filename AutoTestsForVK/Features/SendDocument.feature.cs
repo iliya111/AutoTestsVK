@@ -18,21 +18,21 @@ namespace AutoTestsForVK.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.2.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("FriendSearch")]
-    public partial class FriendSearchFeature
+    [NUnit.Framework.DescriptionAttribute("SendDocument")]
+    public partial class SendDocumentFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "FriendSearch.feature"
+#line 1 "SendDocument.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FriendSearch", "Переходим в Сообщение\r\nНаходим нужного человека\r\nЗаходим к нему на страницу\r\nПише" +
-                    "м сообщение\r\nОтправляем сообщение\r\nСделали проверку, отрпавка сообщения", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SendDocument", "\tЗаходим на стартовую страницу ВК\r\n\tВводим данные УЗ\r\n\tЗаходим в сообщения\r\n\tНахо" +
+                    "дим друга\r\n\tЗаходим в диалог\r\n\tОтправляем видео", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,11 +65,11 @@ namespace AutoTestsForVK.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("MessageParcel")]
+        [NUnit.Framework.DescriptionAttribute("SendVideo")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void MessageParcel()
+        public virtual void SendVideo()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MessageParcel", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SendVideo", new string[] {
                         "mytag"});
 #line 10
 this.ScenarioSetup(scenarioInfo);
@@ -84,11 +84,15 @@ this.ScenarioSetup(scenarioInfo);
 #line 15
  testRunner.And("Нажать на аватарку", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.And("Написать сообщение \"Привет\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Нажимаем на кнопку прикрепить документ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.And("Отправить сообщение", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Нажимаем на кнопку Документ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
- testRunner.Then("Проверка отправки сообщения", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Прикрепляем документ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.And("Отправляем", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+ testRunner.Then("Проверяем отправку документа", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

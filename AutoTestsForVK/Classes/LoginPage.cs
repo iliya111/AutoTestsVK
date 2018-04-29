@@ -15,15 +15,15 @@ namespace AutoTestsForVK.Classes
         {
             PageFactory.InitElements(PropertiesCollection.driver, this);
         }
-
+        //Поле ввода логина
         [FindsBy(How = How.XPath, Using = "//input[@class='dark'][@id='quick_email']")]
         public IWebElement EnterLogin { get; set; }
 
-
+        //Поле ввода пароля
         [FindsBy(How = How.XPath, Using = "//input[@name='pass']")]
         public IWebElement EnterPassword { get; set; }
 
-
+        //Кнопка войти
         [FindsBy(How = How.XPath, Using = "//button[contains(@class,'quick_login_button')]")]
         public IWebElement EnterInput { get; set; }
 

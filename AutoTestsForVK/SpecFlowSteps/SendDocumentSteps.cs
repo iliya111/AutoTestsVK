@@ -38,10 +38,5 @@ namespace AutoTestsForVK
             Thread.Sleep(6000);
         }
         
-        [Then(@"Проверяем отправку документа")]
-        public void ThenПроверяемОтправкуДокумента()
-        {
-           
-        }
     }
 }

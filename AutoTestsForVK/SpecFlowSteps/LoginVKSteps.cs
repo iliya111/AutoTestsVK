@@ -13,7 +13,6 @@ namespace AutoTestsForVK
         {
             LoginPage Log = new LoginPage();
             Log.URL();
-            //Thread.Sleep(2000);
             Log.Login(Login, Password);
 
         }

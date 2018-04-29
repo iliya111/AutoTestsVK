@@ -15,9 +15,11 @@ namespace AutoTestsForVK.Classes
         {
             PageFactory.InitElements(PropertiesCollection.driver, this);
         }
+        //Поле сообщения
         [FindsBy(How = How.XPath, Using = "//*[text()='Сообщения']")]
         public IWebElement Online { get; set; }
 
+        //Поле поиска друга
         [FindsBy(How = How.XPath, Using = "//input[@id='im_dialogs_search']")]
         public IWebElement Friend { get; set; }
         public void Search(string Name)
@@ -25,15 +27,17 @@ namespace AutoTestsForVK.Classes
             Friend.SendKeys(Name);
         }
 
-
+        //Найденный друг
         [FindsBy(How = How.XPath, Using = "(//div[@class='nim-dialog--name'])[1]")]
         public IWebElement Dialog { get; set; }
         public object Name { get; internal set; }
+
         public void OpenDialog()
         {
             Dialog.Click();
         }
 
+        // Поле для ввода сообщения
         [FindsBy(How = How.XPath, Using = "//div[@class='im_editable im-chat-input--text _im_text']")]
         public IWebElement CMC { get; set; }
         public void GoCMC(string CmC)
@@ -41,8 +45,10 @@ namespace AutoTestsForVK.Classes
             CMC.SendKeys(CmC);
         }
 
+        //Кнопка отправить сообщение
         [FindsBy(How = How.XPath, Using = "(//button[@class='im-send-btn im-chat-input--send _im_send im-send-btn_send'])")]
         public IWebElement itog { get; set; }
+
         public void Itog()
         {
             itog.Click();

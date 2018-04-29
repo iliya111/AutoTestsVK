@@ -17,7 +17,6 @@ namespace SenatUI.Hooks
         public void BeforeScenario()
         {
             PropertiesCollection.driver = new ChromeDriver();
-            Console.WriteLine("Открыли браузер");
             PropertiesCollection.driver.Manage().Window.Maximize();
             PropertiesCollection.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
@@ -31,15 +30,12 @@ namespace SenatUI.Hooks
                 Screenshot ss = ((ITakesScreenshot)PropertiesCollection.driver).GetScreenshot();
                 String scenarioName = ScenarioContext.Current.ScenarioInfo.Title;
                 String currDateTime = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
-                Console.WriteLine("Current date and time: " + currDateTime);
-                Console.WriteLine("Failed scenario: " + scenarioName);
                 ss.SaveAsFile("C:\\Users\\Out-velichkin-ai\\source\\repos\\SenatSolution\\SenatUI\\Screenshots\\" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_") + scenarioName + ".png", ScreenshotImageFormat.Png);
 
 
                 PropertiesCollection.driver.Close();
             }
             PropertiesCollection.driver.Close();
-            Console.WriteLine("Закрыли браузер");
         }
     }
 }

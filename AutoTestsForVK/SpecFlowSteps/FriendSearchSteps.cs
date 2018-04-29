@@ -25,10 +25,10 @@ namespace AutoTestsForVK
         [When(@"Нажать на аватарку")]
         public void WhenНажатьНаАватарку()
         {
-            //Thread.Sleep(6000);
             GoToMessage go = new GoToMessage();
+            Thread.Sleep(2000);
             go.OpenDialog();
-            Thread.Sleep(6000);
+            
         }
         
         [When(@"Написать сообщение ""(.*)""")]
@@ -36,7 +36,6 @@ namespace AutoTestsForVK
         {
             GoToMessage goTo = new GoToMessage();
             goTo.GoCMC(CmC);
-            //Thread.Sleep(8000);
         }
         
         [When(@"Отправить сообщение")]
@@ -47,12 +46,6 @@ namespace AutoTestsForVK
             message.Itog();
             Thread.Sleep(5000);
         }
-        
-        [Then(@"Проверка отправки сообщения")]
-        public void ThenПроверкаОтправкиСообщения()
-        {
-            GoToMessage AssertGoToMessage = new GoToMessage();
-            
-        }
+       
     }
 }

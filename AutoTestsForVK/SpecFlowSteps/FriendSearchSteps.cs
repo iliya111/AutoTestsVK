@@ -41,10 +41,10 @@ namespace AutoTestsForVK
         [When(@"Отправить сообщение")]
         public void WhenОтправитьСообщение()
         {
-            Thread.Sleep(15000);
+            Thread.Sleep(5000);
             GoToMessage message = new GoToMessage();
             message.Itog();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
         }
        
     }

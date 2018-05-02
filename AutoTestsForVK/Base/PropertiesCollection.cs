@@ -7,16 +7,6 @@ using System.Threading.Tasks;
 
 namespace SenatUI
 {
-    enum PropertyType
-    {
-        Id,
-        Name,
-        LinkText,
-        CssSelector,
-        ClassName,
-        Xpath
-    }
-
     class PropertiesCollection
     {
         public static IWebDriver driver { get; set; }

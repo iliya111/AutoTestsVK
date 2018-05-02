@@ -11,31 +11,12 @@ namespace SenatUI.Hooks
     [Binding]
     public sealed class Hooks
     {
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
-
         [BeforeScenario]
         public void BeforeScenario()
         {
             PropertiesCollection.driver = new ChromeDriver();
             PropertiesCollection.driver.Manage().Window.Maximize();
             PropertiesCollection.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-        }
-
-        [AfterScenario]
-        public void AfterScenario()
-        {
-            if (ScenarioContext.Current.TestError != null)
-            {
-
-                Screenshot ss = ((ITakesScreenshot)PropertiesCollection.driver).GetScreenshot();
-                String scenarioName = ScenarioContext.Current.ScenarioInfo.Title;
-                String currDateTime = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
-                ss.SaveAsFile("C:\\Users\\Out-velichkin-ai\\source\\repos\\SenatSolution\\SenatUI\\Screenshots\\" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_") + scenarioName + ".png", ScreenshotImageFormat.Png);
-
-
-                PropertiesCollection.driver.Close();
-            }
-            PropertiesCollection.driver.Close();
         }
     }
 }

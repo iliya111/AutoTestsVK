@@ -18,21 +18,20 @@ namespace AutoTestsForVK.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.2.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("LoginVK")]
-    public partial class LoginVKFeature
+    [NUnit.Framework.DescriptionAttribute("WritingOnTheWall")]
+    public partial class WritingOnTheWallFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "LoginVK.feature"
+#line 1 "WritingOnTheWall.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "LoginVK", "Перешли на страницу ВКонтакте\r\nВвели данные УЗ\r\nВыполнели Ввод\r\nСделали проверку," +
-                    " логин выполнен", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WritingOnTheWall", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,18 +64,30 @@ namespace AutoTestsForVK.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("LoginVK")]
+        [NUnit.Framework.DescriptionAttribute("WritingOnTheWall")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void LoginVK()
+        public virtual void WritingOnTheWall()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("LoginVK", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WritingOnTheWall", new string[] {
                         "mytag"});
-#line 8
+#line 5
 this.ScenarioSetup(scenarioInfo);
-#line 9
+#line 6
  testRunner.Given("Вводим логин и пароль \"89998304592\" \"qazxswedcvfr\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
+#line 7
  testRunner.Then("Проверка выполненного логина", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 8
+ testRunner.When("Заходим друзья", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+ testRunner.And("Находим друга \"Александра Дмитриевна\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.And("Заходим на страницу", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And("Находим и прикрепляем аудиозапись на стену \"Бездыханным\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("Отправить сообщение на стену", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.And("Ставим лайк", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -74,17 +74,17 @@ namespace AutoTestsForVK.Features
 #line 10
 this.ScenarioSetup(scenarioInfo);
 #line 11
- testRunner.Given("Вводим логин и пароль \"89998304592\" \"qazxswedcvfr\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Вводим логин и пароль \"Логин\" \"Пароль\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
  testRunner.Then("Проверка выполненного логина", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
  testRunner.When("Заходим в Сообщения", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
- testRunner.And("В строке Поиск находим \"Александра Дмитриева\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("В строке Поиск находим \"Имя Фамилия\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
  testRunner.And("Нажать на аватарку", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.And("Написать сообщение \"Привет\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Написать сообщение \"Сообщщение\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
  testRunner.And("Отправить сообщение", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

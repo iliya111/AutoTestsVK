@@ -73,17 +73,17 @@ namespace AutoTestsForVK.Features
 #line 5
 this.ScenarioSetup(scenarioInfo);
 #line 6
- testRunner.Given("Вводим логин и пароль \"89998304592\" \"qazxswedcvfr\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Вводим логин и пароль \"Логин\" \"Пароль\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
  testRunner.Then("Проверка выполненного логина", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 8
  testRunner.When("Заходим друзья", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.And("Находим друга \"Александра Дмитриевна\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Находим друга \"Имя Фамилия\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
  testRunner.And("Заходим на страницу", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And("Находим и прикрепляем аудиозапись на стену \"Бездыханным\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Находим и прикрепляем аудиозапись на стену \"Название трека\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
  testRunner.And("Отправить сообщение на стену", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
